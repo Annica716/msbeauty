@@ -1,0 +1,1399 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日系美妝小舖</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff0f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffc0cb;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 2em;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .product {
+            background-color: #ffffff;
+            border: 2px solid #ffc0cb;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px;
+            width: 250px;
+            box-shadow: 2px 2px 10px #ffdde5;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .product h3 {
+            color: #d6336c;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .product p {
+            margin: 5px 0;
+        }
+        .add-to-cart {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .add-to-cart:hover {
+            background-color: #ff1493;
+        }
+        #cart {
+            background-color: #fff0f5;
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #ffc0cb;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        @media (max-width: 600px) {
+            .product {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        日系美妝小舖
+    </header>
+    <div class="product-list">
+
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="水潤柔光腮紅霜-P01 珊瑚粉">
+            <h3>水潤柔光腮紅霜-P01 珊瑚粉</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$250.0</p>
+            <p><strong>庫存：</strong>5 件</p>
+            <button class="add-to-cart" onclick="addToCart('水潤柔光腮紅霜-P01 珊瑚粉', 250.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="水潤柔光腮紅霜-P02 玫瑰紅">
+            <h3>水潤柔光腮紅霜-P02 玫瑰紅</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$250.0</p>
+            <p><strong>庫存：</strong>5 件</p>
+            <button class="add-to-cart" onclick="addToCart('水潤柔光腮紅霜-P02 玫瑰紅', 250.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="水潤柔光腮紅霜-P05 薰衣草粉">
+            <h3>水潤柔光腮紅霜-P05 薰衣草粉</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$250.0</p>
+            <p><strong>庫存：</strong>5 件</p>
+            <button class="add-to-cart" onclick="addToCart('水潤柔光腮紅霜-P05 薰衣草粉', 250.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="水潤柔光腮紅霜-05 甜美杏桃">
+            <h3>水潤柔光腮紅霜-05 甜美杏桃</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$250.0</p>
+            <p><strong>庫存：</strong>10 件</p>
+            <button class="add-to-cart" onclick="addToCart('水潤柔光腮紅霜-05 甜美杏桃', 250.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="水潤柔光腮紅霜-16 杏仁磚紅">
+            <h3>水潤柔光腮紅霜-16 杏仁磚紅</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$250.0</p>
+            <p><strong>庫存：</strong>11 件</p>
+            <button class="add-to-cart" onclick="addToCart('水潤柔光腮紅霜-16 杏仁磚紅', 250.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="水潤柔光腮紅霜-21 甜橘茶">
+            <h3>水潤柔光腮紅霜-21 甜橘茶</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$250.0</p>
+            <p><strong>庫存：</strong>9 件</p>
+            <button class="add-to-cart" onclick="addToCart('水潤柔光腮紅霜-21 甜橘茶', 250.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="水潤柔光腮紅霜-23 丘比特粉紅色">
+            <h3>水潤柔光腮紅霜-23 丘比特粉紅色</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$330.0</p>
+            <p><strong>庫存：</strong>0 件</p>
+            <button class="add-to-cart" onclick="addToCart('水潤柔光腮紅霜-23 丘比特粉紅色', 330.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="水潤柔光腮紅霜-CL01 奶油腮紅">
+            <h3>水潤柔光腮紅霜-CL01 奶油腮紅</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$250.0</p>
+            <p><strong>庫存：</strong>12 件</p>
+            <button class="add-to-cart" onclick="addToCart('水潤柔光腮紅霜-CL01 奶油腮紅', 250.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="棉花糖蜜粉餅-MO 明亮膚色">
+            <h3>棉花糖蜜粉餅-MO 明亮膚色</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$350.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('棉花糖蜜粉餅-MO 明亮膚色', 350.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="棉花糖蜜粉餅-ML 白晳透明膚色">
+            <h3>棉花糖蜜粉餅-ML 白晳透明膚色</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$350.0</p>
+            <p><strong>庫存：</strong>4 件</p>
+            <button class="add-to-cart" onclick="addToCart('棉花糖蜜粉餅-ML 白晳透明膚色', 350.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="棉花糖蜜粉餅-MI 白晳膚色">
+            <h3>棉花糖蜜粉餅-MI 白晳膚色</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$350.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('棉花糖蜜粉餅-MI 白晳膚色', 350.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="棉花糖蜜粉餅-MB 自然膚色">
+            <h3>棉花糖蜜粉餅-MB 自然膚色</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$350.0</p>
+            <p><strong>庫存：</strong>4 件</p>
+            <button class="add-to-cart" onclick="addToCart('棉花糖蜜粉餅-MB 自然膚色', 350.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="五色蜜粉餅-01 花漾色調  SPF 19PA++">
+            <h3>五色蜜粉餅-01 花漾色調  SPF 19PA++</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$340.0</p>
+            <p><strong>庫存：</strong>9 件</p>
+            <button class="add-to-cart" onclick="addToCart('五色蜜粉餅-01 花漾色調  SPF 19PA++', 340.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="五色蜜粉餅-01 花漾色調 SPF 19PA++ 限定版小香風">
+            <h3>五色蜜粉餅-01 花漾色調 SPF 19PA++ 限定版小香風</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$460.0</p>
+            <p><strong>庫存：</strong>0 件</p>
+            <button class="add-to-cart" onclick="addToCart('五色蜜粉餅-01 花漾色調 SPF 19PA++ 限定版小香風', 460.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="五色蜜粉餅-01 夢幻繡球花 光澤感 SPF 24PA++ ">
+            <h3>五色蜜粉餅-01 夢幻繡球花 光澤感 SPF 24PA++ </h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$350.0</p>
+            <p><strong>庫存：</strong>8 件</p>
+            <button class="add-to-cart" onclick="addToCart('五色蜜粉餅-01 夢幻繡球花 光澤感 SPF 24PA++ ', 350.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="五色蜜粉餅-01 夢幻繡球花 光澤感 SPF 24PA++ 限定版小香風">
+            <h3>五色蜜粉餅-01 夢幻繡球花 光澤感 SPF 24PA++ 限定版小香風</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$460.0</p>
+            <p><strong>庫存：</strong>0 件</p>
+            <button class="add-to-cart" onclick="addToCart('五色蜜粉餅-01 夢幻繡球花 光澤感 SPF 24PA++ 限定版小香風', 460.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="五色蜜粉餅-02 清透櫻花">
+            <h3>五色蜜粉餅-02 清透櫻花</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$340.0</p>
+            <p><strong>庫存：</strong>5 件</p>
+            <button class="add-to-cart" onclick="addToCart('五色蜜粉餅-02 清透櫻花', 340.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="五色蜜粉餅-03 雞蛋花園">
+            <h3>五色蜜粉餅-03 雞蛋花園</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$340.0</p>
+            <p><strong>庫存：</strong>5 件</p>
+            <button class="add-to-cart" onclick="addToCart('五色蜜粉餅-03 雞蛋花園', 340.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="五色蜜粉餅(補充包)-01 花漾色調 SPF 19PA++">
+            <h3>五色蜜粉餅(補充包)-01 花漾色調 SPF 19PA++</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$300.0</p>
+            <p><strong>庫存：</strong>10 件</p>
+            <button class="add-to-cart" onclick="addToCart('五色蜜粉餅(補充包)-01 花漾色調 SPF 19PA++', 300.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="五色蜜粉餅(補充包)-01 夢幻繡球花 光澤感 SPF 24PA++ ">
+            <h3>五色蜜粉餅(補充包)-01 夢幻繡球花 光澤感 SPF 24PA++ </h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$300.0</p>
+            <p><strong>庫存：</strong>10 件</p>
+            <button class="add-to-cart" onclick="addToCart('五色蜜粉餅(補充包)-01 夢幻繡球花 光澤感 SPF 24PA++ ', 300.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="五色蜜粉餅(補充包)-02 清透櫻花">
+            <h3>五色蜜粉餅(補充包)-02 清透櫻花</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$300.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('五色蜜粉餅(補充包)-02 清透櫻花', 300.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="五色蜜粉餅(補充包)-03 雞蛋花園">
+            <h3>五色蜜粉餅(補充包)-03 雞蛋花園</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$300.0</p>
+            <p><strong>庫存：</strong>10 件</p>
+            <button class="add-to-cart" onclick="addToCart('五色蜜粉餅(補充包)-03 雞蛋花園', 300.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="蜜粉刷具">
+            <h3>蜜粉刷具</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$199.0</p>
+            <p><strong>庫存：</strong>9 件</p>
+            <button class="add-to-cart" onclick="addToCart('蜜粉刷具', 199.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="輕盈透亮氣墊粉餅-01淺米色">
+            <h3>輕盈透亮氣墊粉餅-01淺米色</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$500.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('輕盈透亮氣墊粉餅-01淺米色', 500.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="花漾戀愛修容-01 桃花芙蓉">
+            <h3>花漾戀愛修容-01 桃花芙蓉</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$330.0</p>
+            <p><strong>庫存：</strong>5 件</p>
+            <button class="add-to-cart" onclick="addToCart('花漾戀愛修容-01 桃花芙蓉', 330.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="花漾戀愛修容-02 杏色芙蓉">
+            <h3>花漾戀愛修容-02 杏色芙蓉</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$330.0</p>
+            <p><strong>庫存：</strong>8 件</p>
+            <button class="add-to-cart" onclick="addToCart('花漾戀愛修容-02 杏色芙蓉', 330.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="花漾戀愛修容-03 橙色芙蓉">
+            <h3>花漾戀愛修容-03 橙色芙蓉</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$330.0</p>
+            <p><strong>庫存：</strong>4 件</p>
+            <button class="add-to-cart" onclick="addToCart('花漾戀愛修容-03 橙色芙蓉', 330.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="花漾戀愛修容-16 紫丁香">
+            <h3>花漾戀愛修容-16 紫丁香</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$330.0</p>
+            <p><strong>庫存：</strong>12 件</p>
+            <button class="add-to-cart" onclick="addToCart('花漾戀愛修容-16 紫丁香', 330.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="花漾戀愛修容-17 草莓牛奶">
+            <h3>花漾戀愛修容-17 草莓牛奶</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$330.0</p>
+            <p><strong>庫存：</strong>8 件</p>
+            <button class="add-to-cart" onclick="addToCart('花漾戀愛修容-17 草莓牛奶', 330.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="花漾戀愛修容-18蜜桃奶油">
+            <h3>花漾戀愛修容-18蜜桃奶油</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$360.0</p>
+            <p><strong>庫存：</strong>10 件</p>
+            <button class="add-to-cart" onclick="addToCart('花漾戀愛修容-18蜜桃奶油', 360.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="花漾戀愛修容-B01 珊瑚棉花糖">
+            <h3>花漾戀愛修容-B01 珊瑚棉花糖</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$330.0</p>
+            <p><strong>庫存：</strong>6 件</p>
+            <button class="add-to-cart" onclick="addToCart('花漾戀愛修容-B01 珊瑚棉花糖', 330.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="花漾戀愛修容-B02 玫瑰芭蕾舞">
+            <h3>花漾戀愛修容-B02 玫瑰芭蕾舞</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$330.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('花漾戀愛修容-B02 玫瑰芭蕾舞', 330.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="花漾戀愛修容-B03 薰衣草">
+            <h3>花漾戀愛修容-B03 薰衣草</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$330.0</p>
+            <p><strong>庫存：</strong>6 件</p>
+            <button class="add-to-cart" onclick="addToCart('花漾戀愛修容-B03 薰衣草', 330.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="全新巧麗腮紅-P02 牛奶粉紅">
+            <h3>全新巧麗腮紅-P02 牛奶粉紅</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$250.0</p>
+            <p><strong>庫存：</strong>2 件</p>
+            <button class="add-to-cart" onclick="addToCart('全新巧麗腮紅-P02 牛奶粉紅', 250.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="全新巧麗腮紅-P03 蜜桃珊瑚">
+            <h3>全新巧麗腮紅-P03 蜜桃珊瑚</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$250.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('全新巧麗腮紅-P03 蜜桃珊瑚', 250.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="全新巧麗腮紅-P04 裸光米色">
+            <h3>全新巧麗腮紅-P04 裸光米色</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$250.0</p>
+            <p><strong>庫存：</strong>4 件</p>
+            <button class="add-to-cart" onclick="addToCart('全新巧麗腮紅-P04 裸光米色', 250.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="全新巧麗腮紅-P05 優雅紫粉">
+            <h3>全新巧麗腮紅-P05 優雅紫粉</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$260.0</p>
+            <p><strong>庫存：</strong>2 件</p>
+            <button class="add-to-cart" onclick="addToCart('全新巧麗腮紅-P05 優雅紫粉', 260.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="臥蠶眼影盤-01杏桃粉">
+            <h3>臥蠶眼影盤-01杏桃粉</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$230.0</p>
+            <p><strong>庫存：</strong>6 件</p>
+            <button class="add-to-cart" onclick="addToCart('臥蠶眼影盤-01杏桃粉', 230.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="臥蠶眼影盤-02 櫻桃粉">
+            <h3>臥蠶眼影盤-02 櫻桃粉</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$230.0</p>
+            <p><strong>庫存：</strong>7 件</p>
+            <button class="add-to-cart" onclick="addToCart('臥蠶眼影盤-02 櫻桃粉', 230.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="臥蠶眼影盤-03 奶茶粉">
+            <h3>臥蠶眼影盤-03 奶茶粉</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$230.0</p>
+            <p><strong>庫存：</strong>15 件</p>
+            <button class="add-to-cart" onclick="addToCart('臥蠶眼影盤-03 奶茶粉', 230.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="臥蠶眼影盤-N01淺米色">
+            <h3>臥蠶眼影盤-N01淺米色</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$240.0</p>
+            <p><strong>庫存：</strong>63 件</p>
+            <button class="add-to-cart" onclick="addToCart('臥蠶眼影盤-N01淺米色', 240.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="水潤柔光打亮霜-04 藍色托帕石">
+            <h3>水潤柔光打亮霜-04 藍色托帕石</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$210.0</p>
+            <p><strong>庫存：</strong>7 件</p>
+            <button class="add-to-cart" onclick="addToCart('水潤柔光打亮霜-04 藍色托帕石', 210.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="素顏美肌晚安蜜粉MO01">
+            <h3>素顏美肌晚安蜜粉MO01</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$300.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('素顏美肌晚安蜜粉MO01', 300.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="8色眼影-S01 極光糖果(藍色調)">
+            <h3>8色眼影-S01 極光糖果(藍色調)</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$420.0</p>
+            <p><strong>庫存：</strong>14 件</p>
+            <button class="add-to-cart" onclick="addToCart('8色眼影-S01 極光糖果(藍色調)', 420.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="8色眼影-S02 馬卡龍糖果(黃色調)">
+            <h3>8色眼影-S02 馬卡龍糖果(黃色調)</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$420.0</p>
+            <p><strong>庫存：</strong>9 件</p>
+            <button class="add-to-cart" onclick="addToCart('8色眼影-S02 馬卡龍糖果(黃色調)', 420.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="5色眼影-09玫瑰奶凍色">
+            <h3>5色眼影-09玫瑰奶凍色</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$270.0</p>
+            <p><strong>庫存：</strong>7 件</p>
+            <button class="add-to-cart" onclick="addToCart('5色眼影-09玫瑰奶凍色', 270.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="4色眼影-M07芭蕾粉紅">
+            <h3>4色眼影-M07芭蕾粉紅</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$260.0</p>
+            <p><strong>庫存：</strong>4 件</p>
+            <button class="add-to-cart" onclick="addToCart('4色眼影-M07芭蕾粉紅', 260.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="淡香水-White/白花色柔和香氣">
+            <h3>淡香水-White/白花色柔和香氣</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$260.0</p>
+            <p><strong>庫存：</strong>2 件</p>
+            <button class="add-to-cart" onclick="addToCart('淡香水-White/白花色柔和香氣', 260.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="淡香水-Blue/清新甜美香氣">
+            <h3>淡香水-Blue/清新甜美香氣</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$260.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('淡香水-Blue/清新甜美香氣', 260.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="淡香水-Green/花香柑橘香氣">
+            <h3>淡香水-Green/花香柑橘香氣</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$260.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('淡香水-Green/花香柑橘香氣', 260.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="淡香水-Taupe/清新桂花香氣">
+            <h3>淡香水-Taupe/清新桂花香氣</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$260.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('淡香水-Taupe/清新桂花香氣', 260.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="淡香水-Citrus/柑橘紅茶香氣">
+            <h3>淡香水-Citrus/柑橘紅茶香氣</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$260.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('淡香水-Citrus/柑橘紅茶香氣', 260.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="淡香水-Lilac/甜味花香">
+            <h3>淡香水-Lilac/甜味花香</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$260.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('淡香水-Lilac/甜味花香', 260.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="淡香水-Sweet moment/甜蜜花香">
+            <h3>淡香水-Sweet moment/甜蜜花香</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$260.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('淡香水-Sweet moment/甜蜜花香', 260.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="淡香水-Momo oolong/白桃烏龍香">
+            <h3>淡香水-Momo oolong/白桃烏龍香</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$260.0</p>
+            <p><strong>庫存：</strong>6 件</p>
+            <button class="add-to-cart" onclick="addToCart('淡香水-Momo oolong/白桃烏龍香', 260.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="淡香水-White savon/白色清新皂香">
+            <h3>淡香水-White savon/白色清新皂香</h3>
+            <p><strong>品牌：</strong>Canmake</p>
+            <p><strong>售價：</strong>NT$260.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('淡香水-White savon/白色清新皂香', 260.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="自然霧面小臉粉餅-01 暖色調">
+            <h3>自然霧面小臉粉餅-01 暖色調</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$280.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('自然霧面小臉粉餅-01 暖色調', 280.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="自然霧面小臉粉餅-02 冷色調">
+            <h3>自然霧面小臉粉餅-02 冷色調</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$280.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('自然霧面小臉粉餅-02 冷色調', 280.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="珠光修容霜-01 香檳米白色">
+            <h3>珠光修容霜-01 香檳米白色</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$250.0</p>
+            <p><strong>庫存：</strong>4 件</p>
+            <button class="add-to-cart" onclick="addToCart('珠光修容霜-01 香檳米白色', 250.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="珠光修容霜-02 象牙玫瑰色">
+            <h3>珠光修容霜-02 象牙玫瑰色</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$250.0</p>
+            <p><strong>庫存：</strong>4 件</p>
+            <button class="add-to-cart" onclick="addToCart('珠光修容霜-02 象牙玫瑰色', 250.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="珠光修容霜-03  極光薄荷色">
+            <h3>珠光修容霜-03  極光薄荷色</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$250.0</p>
+            <p><strong>庫存：</strong>4 件</p>
+            <button class="add-to-cart" onclick="addToCart('珠光修容霜-03  極光薄荷色', 250.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="珠光修容霜-04 貝殼粉色">
+            <h3>珠光修容霜-04 貝殼粉色</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$250.0</p>
+            <p><strong>庫存：</strong>4 件</p>
+            <button class="add-to-cart" onclick="addToCart('珠光修容霜-04 貝殼粉色', 250.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="珠光修容霜-SP2浪漫綻放(60周年限定)">
+            <h3>珠光修容霜-SP2浪漫綻放(60周年限定)</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$280.0</p>
+            <p><strong>庫存：</strong>5 件</p>
+            <button class="add-to-cart" onclick="addToCart('珠光修容霜-SP2浪漫綻放(60周年限定)', 280.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="腮紅-01 珊瑚交響曲">
+            <h3>腮紅-01 珊瑚交響曲</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$260.0</p>
+            <p><strong>庫存：</strong>6 件</p>
+            <button class="add-to-cart" onclick="addToCart('腮紅-01 珊瑚交響曲', 260.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="腮紅-02 心情粉紅色">
+            <h3>腮紅-02 心情粉紅色</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$260.0</p>
+            <p><strong>庫存：</strong>7 件</p>
+            <button class="add-to-cart" onclick="addToCart('腮紅-02 心情粉紅色', 260.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="長效控油妝前隔離乳-粉紅膚色">
+            <h3>長效控油妝前隔離乳-粉紅膚色</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$269.0</p>
+            <p><strong>庫存：</strong>1 件</p>
+            <button class="add-to-cart" onclick="addToCart('長效控油妝前隔離乳-粉紅膚色', 269.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="長效控油妝前隔離乳-紫色薰衣草">
+            <h3>長效控油妝前隔離乳-紫色薰衣草</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$279.0</p>
+            <p><strong>庫存：</strong>1 件</p>
+            <button class="add-to-cart" onclick="addToCart('長效控油妝前隔離乳-紫色薰衣草', 279.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="長效控油妝前隔離乳-橘米色">
+            <h3>長效控油妝前隔離乳-橘米色</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$279.0</p>
+            <p><strong>庫存：</strong>2 件</p>
+            <button class="add-to-cart" onclick="addToCart('長效控油妝前隔離乳-橘米色', 279.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="長效控油妝前隔離乳-淺藍色">
+            <h3>長效控油妝前隔離乳-淺藍色</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$269.0</p>
+            <p><strong>庫存：</strong>2 件</p>
+            <button class="add-to-cart" onclick="addToCart('長效控油妝前隔離乳-淺藍色', 269.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="美容液遮瑕膏-10透明藍色">
+            <h3>美容液遮瑕膏-10透明藍色</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$360.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('美容液遮瑕膏-10透明藍色', 360.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="眉筆-01 淺棕色">
+            <h3>眉筆-01 淺棕色</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$140.0</p>
+            <p><strong>庫存：</strong>10 件</p>
+            <button class="add-to-cart" onclick="addToCart('眉筆-01 淺棕色', 140.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="眉筆-02 橄欖棕">
+            <h3>眉筆-02 橄欖棕</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$140.0</p>
+            <p><strong>庫存：</strong>10 件</p>
+            <button class="add-to-cart" onclick="addToCart('眉筆-02 橄欖棕', 140.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="眉筆-03 自然棕">
+            <h3>眉筆-03 自然棕</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$140.0</p>
+            <p><strong>庫存：</strong>10 件</p>
+            <button class="add-to-cart" onclick="addToCart('眉筆-03 自然棕', 140.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="眉筆-04 深棕色">
+            <h3>眉筆-04 深棕色</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$140.0</p>
+            <p><strong>庫存：</strong>10 件</p>
+            <button class="add-to-cart" onclick="addToCart('眉筆-04 深棕色', 140.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="眉筆-05 炭灰色">
+            <h3>眉筆-05 炭灰色</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$140.0</p>
+            <p><strong>庫存：</strong>10 件</p>
+            <button class="add-to-cart" onclick="addToCart('眉筆-05 炭灰色', 140.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="眉筆-06 自然黑">
+            <h3>眉筆-06 自然黑</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$140.0</p>
+            <p><strong>庫存：</strong>6 件</p>
+            <button class="add-to-cart" onclick="addToCart('眉筆-06 自然黑', 140.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="削眉器">
+            <h3>削眉器</h3>
+            <p><strong>品牌：</strong>Cezanne</p>
+            <p><strong>售價：</strong>NT$70.0</p>
+            <p><strong>庫存：</strong>6 件</p>
+            <button class="add-to-cart" onclick="addToCart('削眉器', 70.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="超浸透3D立體面膜-藍色 (1盒)">
+            <h3>超浸透3D立體面膜-藍色 (1盒)</h3>
+            <p><strong>品牌：</strong>肌美精</p>
+            <p><strong>售價：</strong>NT$195.0</p>
+            <p><strong>庫存：</strong>2 件</p>
+            <button class="add-to-cart" onclick="addToCart('超浸透3D立體面膜-藍色 (1盒)', 195.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="超浸透4D立體面膜-粉色 (1盒)">
+            <h3>超浸透4D立體面膜-粉色 (1盒)</h3>
+            <p><strong>品牌：</strong>肌美精</p>
+            <p><strong>售價：</strong>NT$195.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('超浸透4D立體面膜-粉色 (1盒)', 195.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="超浸透5D立體面膜-橙色(1盒)">
+            <h3>超浸透5D立體面膜-橙色(1盒)</h3>
+            <p><strong>品牌：</strong>肌美精</p>
+            <p><strong>售價：</strong>NT$195.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('超浸透5D立體面膜-橙色(1盒)', 195.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="OVER45 緊緻保濕面膜-山茶粉 (1袋)">
+            <h3>OVER45 緊緻保濕面膜-山茶粉 (1袋)</h3>
+            <p><strong>品牌：</strong>lululun</p>
+            <p><strong>售價：</strong>NT$165.0</p>
+            <p><strong>庫存：</strong>2 件</p>
+            <button class="add-to-cart" onclick="addToCart('OVER45 緊緻保濕面膜-山茶粉 (1袋)', 165.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="OVER45 彈潤透亮面膜-鳶尾紫 (1袋)">
+            <h3>OVER45 彈潤透亮面膜-鳶尾紫 (1袋)</h3>
+            <p><strong>品牌：</strong>lululun</p>
+            <p><strong>售價：</strong>NT$165.0</p>
+            <p><strong>庫存：</strong>10 件</p>
+            <button class="add-to-cart" onclick="addToCart('OVER45 彈潤透亮面膜-鳶尾紫 (1袋)', 165.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="One Night急救保養面膜-藍色(1盒)">
+            <h3>One Night急救保養面膜-藍色(1盒)</h3>
+            <p><strong>品牌：</strong>lululun</p>
+            <p><strong>售價：</strong>NT$280.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('One Night急救保養面膜-藍色(1盒)', 280.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="One Night急救保養面膜-紫色(1盒)">
+            <h3>One Night急救保養面膜-紫色(1盒)</h3>
+            <p><strong>品牌：</strong>lululun</p>
+            <p><strong>售價：</strong>NT$280.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('One Night急救保養面膜-紫色(1盒)', 280.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="Pure Everys水漾柔潤滲透面膜(1袋)-粉紅色">
+            <h3>Pure Everys水漾柔潤滲透面膜(1袋)-粉紅色</h3>
+            <p><strong>品牌：</strong>lululun</p>
+            <p><strong>售價：</strong>NT$135.0</p>
+            <p><strong>庫存：</strong>4 件</p>
+            <button class="add-to-cart" onclick="addToCart('Pure Everys水漾柔潤滲透面膜(1袋)-粉紅色', 135.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="HYDRA V mask-亮白款 -黃色(1袋)">
+            <h3>HYDRA V mask-亮白款 -黃色(1袋)</h3>
+            <p><strong>品牌：</strong>lululun</p>
+            <p><strong>售價：</strong>NT$210.0</p>
+            <p><strong>庫存：</strong>4 件</p>
+            <button class="add-to-cart" onclick="addToCart('HYDRA V mask-亮白款 -黃色(1袋)', 210.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="HYDRA EX mask-抗老款-紫色(1袋)">
+            <h3>HYDRA EX mask-抗老款-紫色(1袋)</h3>
+            <p><strong>品牌：</strong>lululun</p>
+            <p><strong>售價：</strong>NT$235.0</p>
+            <p><strong>庫存：</strong>11 件</p>
+            <button class="add-to-cart" onclick="addToCart('HYDRA EX mask-抗老款-紫色(1袋)', 235.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="沖繩限定 蘆薈面膜-綠色(1盒5片)-單片">
+            <h3>沖繩限定 蘆薈面膜-綠色(1盒5片)-單片</h3>
+            <p><strong>品牌：</strong>lululun</p>
+            <p><strong>售價：</strong>NT$75.0</p>
+            <p><strong>庫存：</strong>15 件</p>
+            <button class="add-to-cart" onclick="addToCart('沖繩限定 蘆薈面膜-綠色(1盒5片)-單片', 75.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="沖繩限定 蘆薈面膜-粉色(1盒5片)-單片">
+            <h3>沖繩限定 蘆薈面膜-粉色(1盒5片)-單片</h3>
+            <p><strong>品牌：</strong>lululun</p>
+            <p><strong>售價：</strong>NT$75.0</p>
+            <p><strong>庫存：</strong>9 件</p>
+            <button class="add-to-cart" onclick="addToCart('沖繩限定 蘆薈面膜-粉色(1盒5片)-單片', 75.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="敏感肌保濕護理面膜-藍色(1盒4片)-單片">
+            <h3>敏感肌保濕護理面膜-藍色(1盒4片)-單片</h3>
+            <p><strong>品牌：</strong>lululun</p>
+            <p><strong>售價：</strong>NT$120.0</p>
+            <p><strong>庫存：</strong>12 件</p>
+            <button class="add-to-cart" onclick="addToCart('敏感肌保濕護理面膜-藍色(1盒4片)-單片', 120.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="美白抗痘面膜-綠色(1盒4片)-單片">
+            <h3>美白抗痘面膜-綠色(1盒4片)-單片</h3>
+            <p><strong>品牌：</strong>lululun</p>
+            <p><strong>售價：</strong>NT$120.0</p>
+            <p><strong>庫存：</strong>12 件</p>
+            <button class="add-to-cart" onclick="addToCart('美白抗痘面膜-綠色(1盒4片)-單片', 120.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="插畫面膜-消痘神器-淺黃色">
+            <h3>插畫面膜-消痘神器-淺黃色</h3>
+            <p><strong>品牌：</strong>Kose</p>
+            <p><strong>售價：</strong>NT$165.0</p>
+            <p><strong>庫存：</strong>5 件</p>
+            <button class="add-to-cart" onclick="addToCart('插畫面膜-消痘神器-淺黃色', 165.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="插畫面膜-速攻集中安心面膜-粉紅色">
+            <h3>插畫面膜-速攻集中安心面膜-粉紅色</h3>
+            <p><strong>品牌：</strong>Kose</p>
+            <p><strong>售價：</strong>NT$165.0</p>
+            <p><strong>庫存：</strong>20 件</p>
+            <button class="add-to-cart" onclick="addToCart('插畫面膜-速攻集中安心面膜-粉紅色', 165.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="插畫面膜-亮白維他命C爆彈面膜-深黃色">
+            <h3>插畫面膜-亮白維他命C爆彈面膜-深黃色</h3>
+            <p><strong>品牌：</strong>Kose</p>
+            <p><strong>售價：</strong>NT$165.0</p>
+            <p><strong>庫存：</strong>12 件</p>
+            <button class="add-to-cart" onclick="addToCart('插畫面膜-亮白維他命C爆彈面膜-深黃色', 165.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="插畫面膜-爆彈保濕療癒面膜-藍色">
+            <h3>插畫面膜-爆彈保濕療癒面膜-藍色</h3>
+            <p><strong>品牌：</strong>Kose</p>
+            <p><strong>售價：</strong>NT$165.0</p>
+            <p><strong>庫存：</strong>12 件</p>
+            <button class="add-to-cart" onclick="addToCart('插畫面膜-爆彈保濕療癒面膜-藍色', 165.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="clear turn 頂級凝膠面膜-美白維他命C(1盒)">
+            <h3>clear turn 頂級凝膠面膜-美白維他命C(1盒)</h3>
+            <p><strong>品牌：</strong>Kose</p>
+            <p><strong>售價：</strong>NT$170.0</p>
+            <p><strong>庫存：</strong>0 件</p>
+            <button class="add-to-cart" onclick="addToCart('clear turn 頂級凝膠面膜-美白維他命C(1盒)', 170.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="clear turn 頂級凝膠面膜-玻尿酸高濃度(1盒)">
+            <h3>clear turn 頂級凝膠面膜-玻尿酸高濃度(1盒)</h3>
+            <p><strong>品牌：</strong>Kose</p>
+            <p><strong>售價：</strong>NT$170.0</p>
+            <p><strong>庫存：</strong>1 件</p>
+            <button class="add-to-cart" onclick="addToCart('clear turn 頂級凝膠面膜-玻尿酸高濃度(1盒)', 170.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="眼袋微針貼-1500針(一入二片)">
+            <h3>眼袋微針貼-1500針(一入二片)</h3>
+            <p><strong>品牌：</strong>Kose</p>
+            <p><strong>售價：</strong>NT$290.0</p>
+            <p><strong>庫存：</strong>9 件</p>
+            <button class="add-to-cart" onclick="addToCart('眼袋微針貼-1500針(一入二片)', 290.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="眼袋微針貼-1500針(一盒三入)">
+            <h3>眼袋微針貼-1500針(一盒三入)</h3>
+            <p><strong>品牌：</strong>Kose</p>
+            <p><strong>售價：</strong>NT$780.0</p>
+            <p><strong>庫存：</strong>1 件</p>
+            <button class="add-to-cart" onclick="addToCart('眼袋微針貼-1500針(一盒三入)', 780.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="眼袋微針貼-2000針(一入二片)">
+            <h3>眼袋微針貼-2000針(一入二片)</h3>
+            <p><strong>品牌：</strong>Kose</p>
+            <p><strong>售價：</strong>NT$345.0</p>
+            <p><strong>庫存：</strong>5 件</p>
+            <button class="add-to-cart" onclick="addToCart('眼袋微針貼-2000針(一入二片)', 345.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="眼袋微針貼-2000針(一盒三入)">
+            <h3>眼袋微針貼-2000針(一盒三入)</h3>
+            <p><strong>品牌：</strong>Kose</p>
+            <p><strong>售價：</strong>NT$999.0</p>
+            <p><strong>庫存：</strong>1 件</p>
+            <button class="add-to-cart" onclick="addToCart('眼袋微針貼-2000針(一盒三入)', 999.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="佑天蘭 超保濕果凍面膜-紅色 雙效玻尿酸(1盒)">
+            <h3>佑天蘭 超保濕果凍面膜-紅色 雙效玻尿酸(1盒)</h3>
+            <p><strong>品牌：</strong>UTENA</p>
+            <p><strong>售價：</strong>NT$158.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('佑天蘭 超保濕果凍面膜-紅色 雙效玻尿酸(1盒)', 158.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="佑天蘭 超保濕果凍面膜-藍色 雙效膠原蛋白(1盒)">
+            <h3>佑天蘭 超保濕果凍面膜-藍色 雙效膠原蛋白(1盒)</h3>
+            <p><strong>品牌：</strong>UTENA</p>
+            <p><strong>售價：</strong>NT$158.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('佑天蘭 超保濕果凍面膜-藍色 雙效膠原蛋白(1盒)', 158.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="佑天蘭 超保濕果凍面膜-黃色 雙效蜂王乳(1盒)">
+            <h3>佑天蘭 超保濕果凍面膜-黃色 雙效蜂王乳(1盒)</h3>
+            <p><strong>品牌：</strong>UTENA</p>
+            <p><strong>售價：</strong>NT$158.0</p>
+            <p><strong>庫存：</strong>2 件</p>
+            <button class="add-to-cart" onclick="addToCart('佑天蘭 超保濕果凍面膜-黃色 雙效蜂王乳(1盒)', 158.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="維他命C酵素深層清潔洗面乳">
+            <h3>維他命C酵素深層清潔洗面乳</h3>
+            <p><strong>品牌：</strong>樂敦</p>
+            <p><strong>售價：</strong>NT$185.0</p>
+            <p><strong>庫存：</strong>10 件</p>
+            <button class="add-to-cart" onclick="addToCart('維他命C酵素深層清潔洗面乳', 185.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="高浸透維他命C集中對策面膜">
+            <h3>高浸透維他命C集中對策面膜</h3>
+            <p><strong>品牌：</strong>樂敦</p>
+            <p><strong>售價：</strong>NT$145.0</p>
+            <p><strong>庫存：</strong>5 件</p>
+            <button class="add-to-cart" onclick="addToCart('高浸透維他命C集中對策面膜', 145.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="高純度維他命C美白化粧水">
+            <h3>高純度維他命C美白化粧水</h3>
+            <p><strong>品牌：</strong>樂敦</p>
+            <p><strong>售價：</strong>NT$235.0</p>
+            <p><strong>庫存：</strong>2 件</p>
+            <button class="add-to-cart" onclick="addToCart('高純度維他命C美白化粧水', 235.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="高純度維他命C美白化粧水-補充包">
+            <h3>高純度維他命C美白化粧水-補充包</h3>
+            <p><strong>品牌：</strong>樂敦</p>
+            <p><strong>售價：</strong>NT$200.0</p>
+            <p><strong>庫存：</strong>4 件</p>
+            <button class="add-to-cart" onclick="addToCart('高純度維他命C美白化粧水-補充包', 200.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="高純度維化命C美容精華液">
+            <h3>高純度維化命C美容精華液</h3>
+            <p><strong>品牌：</strong>樂敦</p>
+            <p><strong>售價：</strong>NT$265.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('高純度維化命C美容精華液', 265.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="高純度維化命C全效美白淡斑精華液(加強版)">
+            <h3>高純度維化命C全效美白淡斑精華液(加強版)</h3>
+            <p><strong>品牌：</strong>樂敦</p>
+            <p><strong>售價：</strong>NT$385.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('高純度維化命C全效美白淡斑精華液(加強版)', 385.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="豆乳本鋪美膚濃潤保濕洗面奶-滋潤型-粉色">
+            <h3>豆乳本鋪美膚濃潤保濕洗面奶-滋潤型-粉色</h3>
+            <p><strong>品牌：</strong>莎娜 </p>
+            <p><strong>售價：</strong>NT$160.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('豆乳本鋪美膚濃潤保濕洗面奶-滋潤型-粉色', 160.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="豆乳本鋪美膚濃潤保濕洗面奶-清爽型-藍色">
+            <h3>豆乳本鋪美膚濃潤保濕洗面奶-清爽型-藍色</h3>
+            <p><strong>品牌：</strong>莎娜 </p>
+            <p><strong>售價：</strong>NT$160.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('豆乳本鋪美膚濃潤保濕洗面奶-清爽型-藍色', 160.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="豆乳美肌卸妝霜">
+            <h3>豆乳美肌卸妝霜</h3>
+            <p><strong>品牌：</strong>莎娜 </p>
+            <p><strong>售價：</strong>NT$220.0</p>
+            <p><strong>庫存：</strong>0 件</p>
+            <button class="add-to-cart" onclick="addToCart('豆乳美肌卸妝霜', 220.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="護唇膏-粉紅色">
+            <h3>護唇膏-粉紅色</h3>
+            <p><strong>品牌：</strong>DHC</p>
+            <p><strong>售價：</strong>NT$140.0</p>
+            <p><strong>庫存：</strong>2 件</p>
+            <button class="add-to-cart" onclick="addToCart('護唇膏-粉紅色', 140.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="護唇膏-紅色">
+            <h3>護唇膏-紅色</h3>
+            <p><strong>品牌：</strong>DHC</p>
+            <p><strong>售價：</strong>NT$140.0</p>
+            <p><strong>庫存：</strong>6 件</p>
+            <button class="add-to-cart" onclick="addToCart('護唇膏-紅色', 140.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="護唇膏-橙色">
+            <h3>護唇膏-橙色</h3>
+            <p><strong>品牌：</strong>DHC</p>
+            <p><strong>售價：</strong>NT$140.0</p>
+            <p><strong>庫存：</strong>1 件</p>
+            <button class="add-to-cart" onclick="addToCart('護唇膏-橙色', 140.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="護唇膏-無色">
+            <h3>護唇膏-無色</h3>
+            <p><strong>品牌：</strong>DHC</p>
+            <p><strong>售價：</strong>NT$140.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('護唇膏-無色', 140.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="沖繩琉球黑糖-原味115g">
+            <h3>沖繩琉球黑糖-原味115g</h3>
+            <p><strong>品牌：</strong>琉球黑糖</p>
+            <p><strong>售價：</strong>NT$80.0</p>
+            <p><strong>庫存：</strong>10 件</p>
+            <button class="add-to-cart" onclick="addToCart('沖繩琉球黑糖-原味115g', 80.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="沖繩琉球黑糖-塩味115g">
+            <h3>沖繩琉球黑糖-塩味115g</h3>
+            <p><strong>品牌：</strong>琉球黑糖</p>
+            <p><strong>售價：</strong>NT$80.0</p>
+            <p><strong>庫存：</strong>5 件</p>
+            <button class="add-to-cart" onclick="addToCart('沖繩琉球黑糖-塩味115g', 80.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="沖繩琉球黑糖-薑味115g">
+            <h3>沖繩琉球黑糖-薑味115g</h3>
+            <p><strong>品牌：</strong>琉球黑糖</p>
+            <p><strong>售價：</strong>NT$80.0</p>
+            <p><strong>庫存：</strong>5 件</p>
+            <button class="add-to-cart" onclick="addToCart('沖繩琉球黑糖-薑味115g', 80.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="沖繩琉球黑糖-焦糖100g">
+            <h3>沖繩琉球黑糖-焦糖100g</h3>
+            <p><strong>品牌：</strong>琉球黑糖</p>
+            <p><strong>售價：</strong>NT$80.0</p>
+            <p><strong>庫存：</strong>5 件</p>
+            <button class="add-to-cart" onclick="addToCart('沖繩琉球黑糖-焦糖100g', 80.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="沖繩琉球黑糖-可可100g">
+            <h3>沖繩琉球黑糖-可可100g</h3>
+            <p><strong>品牌：</strong>琉球黑糖</p>
+            <p><strong>售價：</strong>NT$80.0</p>
+            <p><strong>庫存：</strong>5 件</p>
+            <button class="add-to-cart" onclick="addToCart('沖繩琉球黑糖-可可100g', 80.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="沖繩琉球黑糖-原味170g">
+            <h3>沖繩琉球黑糖-原味170g</h3>
+            <p><strong>品牌：</strong>琉球黑糖</p>
+            <p><strong>售價：</strong>NT$110.0</p>
+            <p><strong>庫存：</strong>7 件</p>
+            <button class="add-to-cart" onclick="addToCart('沖繩琉球黑糖-原味170g', 110.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="沖繩琉球黑糖-塩味160g">
+            <h3>沖繩琉球黑糖-塩味160g</h3>
+            <p><strong>品牌：</strong>琉球黑糖</p>
+            <p><strong>售價：</strong>NT$110.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('沖繩琉球黑糖-塩味160g', 110.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="沖繩琉球黑糖-薑味160g">
+            <h3>沖繩琉球黑糖-薑味160g</h3>
+            <p><strong>品牌：</strong>琉球黑糖</p>
+            <p><strong>售價：</strong>NT$110.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('沖繩琉球黑糖-薑味160g', 110.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="沖繩琉球黑糖-可可160g">
+            <h3>沖繩琉球黑糖-可可160g</h3>
+            <p><strong>品牌：</strong>琉球黑糖</p>
+            <p><strong>售價：</strong>NT$110.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('沖繩琉球黑糖-可可160g', 110.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="沖繩琉球黑糖-藍莓160g">
+            <h3>沖繩琉球黑糖-藍莓160g</h3>
+            <p><strong>品牌：</strong>琉球黑糖</p>
+            <p><strong>售價：</strong>NT$110.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('沖繩琉球黑糖-藍莓160g', 110.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="松屋黑糖-130g">
+            <h3>松屋黑糖-130g</h3>
+            <p><strong>品牌：</strong>松屋黑糖</p>
+            <p><strong>售價：</strong>NT$60.0</p>
+            <p><strong>庫存：</strong>12 件</p>
+            <button class="add-to-cart" onclick="addToCart('松屋黑糖-130g', 60.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="代餐餅乾-北海道奶油">
+            <h3>代餐餅乾-北海道奶油</h3>
+            <p><strong>品牌：</strong>濱田</p>
+            <p><strong>售價：</strong>NT$55.0</p>
+            <p><strong>庫存：</strong>3 件</p>
+            <button class="add-to-cart" onclick="addToCart('代餐餅乾-北海道奶油', 55.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="代餐餅乾-葡萄蘋果">
+            <h3>代餐餅乾-葡萄蘋果</h3>
+            <p><strong>品牌：</strong>濱田</p>
+            <p><strong>售價：</strong>NT$55.0</p>
+            <p><strong>庫存：</strong>2 件</p>
+            <button class="add-to-cart" onclick="addToCart('代餐餅乾-葡萄蘋果', 55.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="代餐餅乾-黑巧克力">
+            <h3>代餐餅乾-黑巧克力</h3>
+            <p><strong>品牌：</strong>濱田</p>
+            <p><strong>售價：</strong>NT$55.0</p>
+            <p><strong>庫存：</strong>0 件</p>
+            <button class="add-to-cart" onclick="addToCart('代餐餅乾-黑巧克力', 55.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="代餐餅乾-巧克力香蕉">
+            <h3>代餐餅乾-巧克力香蕉</h3>
+            <p><strong>品牌：</strong>濱田</p>
+            <p><strong>售價：</strong>NT$55.0</p>
+            <p><strong>庫存：</strong>1 件</p>
+            <button class="add-to-cart" onclick="addToCart('代餐餅乾-巧克力香蕉', 55.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="代餐餅乾-杏仁風味">
+            <h3>代餐餅乾-杏仁風味</h3>
+            <p><strong>品牌：</strong>濱田</p>
+            <p><strong>售價：</strong>NT$55.0</p>
+            <p><strong>庫存：</strong>2 件</p>
+            <button class="add-to-cart" onclick="addToCart('代餐餅乾-杏仁風味', 55.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="代餐餅乾-堅果燕麥巧克力">
+            <h3>代餐餅乾-堅果燕麥巧克力</h3>
+            <p><strong>品牌：</strong>濱田</p>
+            <p><strong>售價：</strong>NT$55.0</p>
+            <p><strong>庫存：</strong>0 件</p>
+            <button class="add-to-cart" onclick="addToCart('代餐餅乾-堅果燕麥巧克力', 55.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="代餐餅乾-可可布朗尼">
+            <h3>代餐餅乾-可可布朗尼</h3>
+            <p><strong>品牌：</strong>濱田</p>
+            <p><strong>售價：</strong>NT$55.0</p>
+            <p><strong>庫存：</strong>0 件</p>
+            <button class="add-to-cart" onclick="addToCart('代餐餅乾-可可布朗尼', 55.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="代餐餅乾-紅番薯">
+            <h3>代餐餅乾-紅番薯</h3>
+            <p><strong>品牌：</strong>濱田</p>
+            <p><strong>售價：</strong>NT$55.0</p>
+            <p><strong>庫存：</strong>2 件</p>
+            <button class="add-to-cart" onclick="addToCart('代餐餅乾-紅番薯', 55.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="低卡餅乾-豆漿豆奶(深藍色)">
+            <h3>低卡餅乾-豆漿豆奶(深藍色)</h3>
+            <p><strong>品牌：</strong>朝日</p>
+            <p><strong>售價：</strong>NT$65.0</p>
+            <p><strong>庫存：</strong>6 件</p>
+            <button class="add-to-cart" onclick="addToCart('低卡餅乾-豆漿豆奶(深藍色)', 65.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="低卡餅乾-奶油奶酪(淺藍色)">
+            <h3>低卡餅乾-奶油奶酪(淺藍色)</h3>
+            <p><strong>品牌：</strong>朝日</p>
+            <p><strong>售價：</strong>NT$65.0</p>
+            <p><strong>庫存：</strong>4 件</p>
+            <button class="add-to-cart" onclick="addToCart('低卡餅乾-奶油奶酪(淺藍色)', 65.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="低卡餅乾-奶油塩芝麻(紅色)">
+            <h3>低卡餅乾-奶油塩芝麻(紅色)</h3>
+            <p><strong>品牌：</strong>朝日</p>
+            <p><strong>售價：</strong>NT$65.0</p>
+            <p><strong>庫存：</strong>6 件</p>
+            <button class="add-to-cart" onclick="addToCart('低卡餅乾-奶油塩芝麻(紅色)', 65.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="低卡餅乾-藍莓(紫色)">
+            <h3>低卡餅乾-藍莓(紫色)</h3>
+            <p><strong>品牌：</strong>朝日</p>
+            <p><strong>售價：</strong>NT$65.0</p>
+            <p><strong>庫存：</strong>4 件</p>
+            <button class="add-to-cart" onclick="addToCart('低卡餅乾-藍莓(紫色)', 65.0)">加入購物車</button>
+        </div>
+    
+        <div class="product">
+            <img src="https://via.placeholder.com/250x250.png?text=商品圖片" alt="低卡餅乾-楓糖餅(咖啡色)">
+            <h3>低卡餅乾-楓糖餅(咖啡色)</h3>
+            <p><strong>品牌：</strong>朝日</p>
+            <p><strong>售價：</strong>NT$65.0</p>
+            <p><strong>庫存：</strong>4 件</p>
+            <button class="add-to-cart" onclick="addToCart('低卡餅乾-楓糖餅(咖啡色)', 65.0)">加入購物車</button>
+        </div>
+    
+    </div>
+    <div id="cart">
+        <h2>購物車</h2>
+        <ul id="cart-items"></ul>
+        <p><strong>總金額：</strong>NT$<span id="total">0</span></p>
+        <button class="add-to-cart" onclick="checkout()">結帳</button>
+    </div>
+    <footer>
+        © 2025 日系美妝小舖 | 由雅萱經營
+    </footer>
+    <script>
+        const cart = [];
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            updateCart();
+        }
+        function updateCart() {
+            const cartList = document.getElementById('cart-items');
+            const total = document.getElementById('total');
+            cartList.innerHTML = '';
+            let sum = 0;
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item.name + ' - NT$' + item.price;
+                cartList.appendChild(li);
+                sum += item.price;
+            });
+            total.textContent = sum;
+        }
+        function checkout() {
+            if (cart.length === 0) {
+                alert('購物車是空的喔～');
+            } else {
+                alert('結帳成功！總金額 NT$' + document.getElementById('total').textContent);
+                cart.length = 0;
+                updateCart();
+            }
+        }
+    </script>
+</body>
+</html>
